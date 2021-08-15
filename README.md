@@ -1,4 +1,4 @@
-# Raspberry PI Zero - first start
+# Raspberry Pi Zero - first start
 
 1. Download Raspbian (https://www.raspberrypi.org/software/operating-systems/)
 

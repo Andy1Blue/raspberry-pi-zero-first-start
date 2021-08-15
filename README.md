@@ -20,3 +20,7 @@ network={
 }
 ```
 7. Type `sudo wpa_cli reconfigure` to apply changes
+
+# Useful tools
+
+* https://pinout.xyz/pinout/5v_power - pins descriptions

@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  node_server_raspberry:
+    container_name: node_server_raspberry
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8080:8080'

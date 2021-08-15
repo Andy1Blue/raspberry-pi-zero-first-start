@@ -23,9 +23,55 @@ after the word `rootwait` add `modules-load=dwc2,g_ether` with spaces
 
 6. For WiFi connection (when you are in SSH)
 ```
+cd /etc/network
+nano interfaces
+```
+
+add at the bottom
+
+```
+#auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet manual
+wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
+
+iface default inet dhcp
+```
+
+and save
+
+```
+cd /etc
+nano rc.local
+```
+
+add after `exit 0`
+
+```
+i‍‍fup wlan0
+```
+
+and save
+
+```
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
-add at the bottom and save
+
+add at the bottom
+
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=YOUR_COUNTRY
+
+network={
+  ssid="NETWORK"
+  psk="PASSWORD"
+}
+```
+
+if you need more netowrks just add next
+
 ```
 network={
   ssid="NETWORK"
@@ -33,7 +79,9 @@ network={
 }
 ```
 
-7. Type `sudo wpa_cli reconfigure` to apply changes
+and save
+
+7. Type `sudo wpa_cli reconfigure` to apply changes and `sudo reboot`
 
 # Useful tools
 

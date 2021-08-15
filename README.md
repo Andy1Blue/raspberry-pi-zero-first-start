@@ -1,6 +1,6 @@
 # raspberry-pi-zero-first-start
 
-1. Download latest Raspbian (https://www.raspberrypi.org/software/operating-systems/)
+1. Download Raspbian (https://www.raspberrypi.org/software/operating-systems/)
 2. Install OS using Etcher (https://www.balena.io/etcher/)
 3. Open terminal with sd-cart/boot
 ```touch ssh```

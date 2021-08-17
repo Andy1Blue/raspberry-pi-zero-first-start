@@ -135,6 +135,27 @@ cd server
 docker-compose -f docker-compose.yml up -d
 ```
 
+## (Optional)
+
+If you have problem with Docker, you can install NODE and NPM.
+
+We need version for ARM V6, the latest NODE with this version is a NODE 10.
+
+```ssh
+wget https://nodejs.org/dist/latest-v10.x/node-v10.24.1-linux-armv6l.tar.xz
+tar -xJf node-v10.24.1-linux-armv6l.tar.xz
+```
+
+```ssh
+cd node-v10.24.1-linux-armv6l/
+sudo cp -R * /usr/local/
+```
+
+```ssh
+node -v
+npm -v
+```
+
 ## Useful tools
 
 - https://pinout.xyz/pinout/5v_power - pins descriptions

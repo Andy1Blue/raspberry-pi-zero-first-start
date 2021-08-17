@@ -1,10 +1,12 @@
 # Raspberry Pi Zero - first start
 
-1. Download Raspbian (https://www.raspberrypi.org/software/operating-systems/)
+## Install Raspbian and Etcher
 
-2. Install OS using Etcher (https://www.balena.io/etcher/)
+Download Raspbian (https://www.raspberrypi.org/software/operating-systems/)
 
-3. Open terminal with sd-cart/boot
+Install OS using Etcher (https://www.balena.io/etcher/)
+
+## First config in sd-cart/boot
 
 ```ssh
 touch ssh
@@ -22,11 +24,15 @@ sudo nano cmdline.txt
 
 after the word `rootwait` add `modules-load=dwc2,g_ether` with spaces
 
-4. (ONLY FOR LINUX) In internet connection setting (IPv4 card) change to `Link-Local only`
+## USB (SSH) connection
 
-5. Try to connect with `pi@raspberrypi.local` or lunch `ping raspberrypi.local` and use `ssh pi@<ip>` (default password is `raspberry`)
+(ONLY FOR LINUX) In internet connection setting (IPv4 card) change to `Link-Local only`
 
-6. For WiFi connection (when you are in SSH)
+Try to connect with `pi@raspberrypi.local` or lunch `ping raspberrypi.local` and use `ssh pi@<ip>` (default password is `raspberry`)
+
+## WiFi connection
+
+For WiFi connection (when you are in SSH)
 
 ```ssh
 cd /etc/network
@@ -87,11 +93,42 @@ network={
 
 and save
 
-7. Type `sudo wpa_cli reconfigure` to apply changes and `sudo reboot`
+Type `sudo wpa_cli reconfigure` to apply changes and `sudo reboot`
 
-8. Install Docker with docker-comppose (https://docs.docker.com/engine/install/ubuntu/)
+## Install Docker
 
-Run
+```ssh
+sudo nano /boot/cmdline.txt
+```
+
+Add `cgroup_enable=memory swapaccount=1` at the end
+
+```ssh
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker pi
+sudo reboot
+```
+
+```ssh
+docker version
+docker run hello-world
+```
+
+## Install Docker-Compose
+
+```ssh
+sudo apt-get install libffi-dev libssl-dev
+sudo apt install python3-dev
+sudo apt-get install -y python3 python3-pip
+sudo pip3 install docker-compose
+```
+
+```ssh
+sudo systemctl enable docker
+```
+
+## Run server
 
 ```ssh
 cd server

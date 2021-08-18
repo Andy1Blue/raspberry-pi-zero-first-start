@@ -1,4 +1,4 @@
-# Raspberry Pi Zero - first start
+# Raspberry Pi Zero - first start / how to configure
 
 ## Install Raspbian and Etcher
 
@@ -135,7 +135,7 @@ cd server
 docker-compose -f docker-compose.yml up -d
 ```
 
-## (Optional)
+## Install NODE and NPM (Optional)
 
 If you have problem with Docker, you can install NODE and NPM.
 
@@ -154,6 +154,51 @@ sudo cp -R * /usr/local/
 ```ssh
 node -v
 npm -v
+```
+
+## Instal PM2 (Optional)
+
+```ssh
+sudo npm install -g pm2
+```
+
+```ssh
+pm2 status
+```
+
+Run application on PM2
+
+```ssh
+cd ~/your-awesome-node-app/
+pm2 start index.js
+```
+
+For "save" setup after reboot you need run:
+
+```ssh
+pm2 save
+```
+
+and after reboot
+
+```ssh
+pm2 resurrect
+```
+
+Run PM2 on startup
+
+```ssh
+pm2 startup
+```
+
+```ssh
+sudo env PATH=$PATH:/usr/local/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi
+```
+
+Reboot for test
+
+```ssh
+sudo reboot
 ```
 
 ## Useful tools

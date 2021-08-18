@@ -1,5 +1,7 @@
 # Raspberry Pi Zero - first start / how to configure
 
+[Install Raspbian and Etcher](/#install-raspbian-and-etcher)
+
 ## Install Raspbian and Etcher
 
 Download Raspbian (https://www.raspberrypi.org/software/operating-systems/)

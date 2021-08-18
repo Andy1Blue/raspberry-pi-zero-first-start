@@ -1,6 +1,15 @@
 # Raspberry Pi Zero - first start / how to configure
 
 [Install Raspbian and Etcher](#install-raspbian-and-etcher)
+[First config in sd-cart/boot](#first-config-in-sd-cartboot)
+[USB (SSH) connection](#usb-ssh-connection)
+[WiFi connection](#wifi-connection)
+[Install Docker](#install-docker)
+[Install Docker-Compose](#install-docker-compose)
+[Run server](#run-server)
+[Install NODE and NPM](#install-node-and-npm-optional)
+[Install PM2](#install-pm2-optional)
+[Useful tools](#useful-tools)
 
 ## Install Raspbian and Etcher
 
@@ -158,7 +167,7 @@ node -v
 npm -v
 ```
 
-## Instal PM2 (Optional)
+## Install PM2 (Optional)
 
 ```ssh
 sudo npm install -g pm2

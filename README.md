@@ -93,7 +93,7 @@ network={
 }
 ```
 
-if you need more netowrks just add next
+if you need more networks just add next
 
 ```ssh
 network={

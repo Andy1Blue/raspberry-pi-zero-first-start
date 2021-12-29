@@ -149,7 +149,7 @@ docker-compose -f docker-compose.yml up -d
 
 ## Install GIT
 
-Run the following commands:
+Run the following commands
 
 ```ssh
 sudo apt update

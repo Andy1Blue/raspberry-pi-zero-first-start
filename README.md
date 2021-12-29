@@ -7,6 +7,7 @@
 * [Install Docker](#install-docker)
 * [Install Docker-Compose](#install-docker-compose)
 * [Run server](#run-server)
+* [Install GIT](#install-git)
 * [Install NODE and NPM](#install-node-and-npm-optional)
 * [Install PM2](#install-pm2-optional)
 * [Useful tools](#useful-tools)
@@ -144,6 +145,21 @@ sudo systemctl enable docker
 ```ssh
 cd server
 docker-compose -f docker-compose.yml up -d
+```
+
+## Install GIT
+
+Run the following commands:
+
+```ssh
+sudo apt update
+sudo apt install git
+```
+
+Verify the installation
+
+```ssh
+git --version
 ```
 
 ## Install NODE and NPM (Optional)

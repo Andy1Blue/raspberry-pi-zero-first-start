@@ -1,7 +1,7 @@
 # Raspberry Pi Zero - first start / how to configure
 
 * [Install Raspbian and Etcher](#install-raspbian-and-etcher)
-* [First config in sd-cart/boot](#first-config-in-sd-cartboot)
+* [First config in sd-card/boot](#first-config-in-sd-cartboot)
 * [USB (SSH) connection](#usb-ssh-connection)
 * [WiFi connection](#wifi-connection)
 * [Install Docker](#install-docker)
@@ -18,7 +18,7 @@ Download Raspbian (https://www.raspberrypi.org/software/operating-systems/)
 
 Install OS using Etcher (https://www.balena.io/etcher/)
 
-## First config in sd-cart/boot
+## First config in sd-card/boot
 
 ```ssh
 touch ssh
